@@ -1,0 +1,16 @@
+{
+  "name": "infra",
+  "version": "0.0.2",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "docker compose up -d --build --force-recreate"
+  },
+  "devDependencies": {
+    "pnpm": "^8.11.0",
+    "prettier": "^3.1.0"
+  },
+  "packageManager": "pnpm@8.11.0"
+}

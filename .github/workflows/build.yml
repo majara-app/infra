@@ -1,0 +1,12 @@
+name: Pull and build
+on: [push, workflow_dispatch]
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: self-hosted
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@main
+
+      - name: 'Run'
+        run: docker compose up -d --build --force-recreate
