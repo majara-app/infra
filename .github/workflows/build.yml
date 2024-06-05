@@ -9,4 +9,7 @@ jobs:
         uses: actions/checkout@main
 
       - name: 'Run'
-        run: docker compose up -d --build --force-recreate
+        run: |
+          rm -rf .env || true
+          cp .env.production .env
+          docker compose up -d --build --force-recreate
